@@ -1,10 +1,17 @@
 /*PRE LOADER*/
 $(window).load(function() {
-	$('.content-preloader').delay(1000).fadeOut('slow');
-		
+	$('.preloader-background').delay(1700).fadeOut('slow');
 	
+	$('.preloader-wrapper')
+		.delay(1700)
+		.fadeOut();
+		
+	setTimeout(function(){
+		$('#content').addClass("content-show");
+		$('#content').removeClass("content-hide");
+	}, 1200);
 });
-
+/*
 document.addEventListener("DOMContentLoaded", function(){
 	$('.preloader-background').delay(1700).fadeOut('slow');
 	
@@ -17,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		$('#content').removeClass("content-hide");
 	}, 1200);
 });
-
+*/
 /* NAV BAR */
 function navshow(){
 	//nav show
